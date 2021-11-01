@@ -8,7 +8,7 @@ function verificaNumero(lista: any[]): boolean {
     let i: number=0;
     for(i;i<lista.length;i++){
 
-        if(isNaN(lista[i])==true){
+        if(isNaN(lista[i])){
             console.log("Essas Lista não é completamente numérica");
             return false;
         }
@@ -17,7 +17,7 @@ function verificaNumero(lista: any[]): boolean {
 }
 
 function analisalista(lista: any[]): number[] {
-    if(verificaNumero(lista)== true){
+    if(verificaNumero(lista)){
         let maior:number= -Infinity;
         let menor:number= Infinity;
         let soma:number= 0;
@@ -41,7 +41,7 @@ function analisalista(lista: any[]): number[] {
 
 //Demonstre essa função com o paradigma funcional e imperativo
 const verificaNumeroF = (lista: any[]): any =>{
-    return lista.find((value) => isNaN(value)==true)? false : true;
+    return lista.find((value) => isNaN(value))? false : true;
 }
 console.log(verificaNumeroF([1,'a',3]));
 console.log(verificaNumero([1, 'a', 3]));

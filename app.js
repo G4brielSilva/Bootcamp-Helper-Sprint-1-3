@@ -6,7 +6,7 @@
 function verificaNumero(lista) {
     let i = 0;
     for (i; i < lista.length; i++) {
-        if (isNaN(lista[i]) == true) {
+        if (isNaN(lista[i])) {
             console.log("Essas Lista não é completamente numérica");
             return false;
         }
@@ -14,7 +14,7 @@ function verificaNumero(lista) {
     return true;
 }
 function analisalista(lista) {
-    if (verificaNumero(lista) == true) {
+    if (verificaNumero(lista)) {
         let maior = -Infinity;
         let menor = Infinity;
         let soma = 0;
@@ -38,7 +38,7 @@ function analisalista(lista) {
 }
 //Demonstre essa função com o paradigma funcional e imperativo
 const verificaNumeroF = (lista) => {
-    return lista.find((value) => isNaN(value) == true) ? false : true;
+    return lista.find((value) => isNaN(value)) ? false : true;
 };
 console.log(verificaNumeroF([1, 'a', 3]));
 console.log(verificaNumero([1, 'a', 3]));
